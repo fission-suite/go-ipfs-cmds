@@ -97,7 +97,7 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	if !allowOrigin(r, h.cfg) || !allowReferer(r, h.cfg) {
 		http.Error(w, "403 - Forbidden", http.StatusForbidden)
-		log.Warningf("API blocked request to %s. (possible CSRF)", r.URL)
+		log.Warnf("API blocked request to %s. (possible CSRF)", r.URL)
 		return
 	}
 
