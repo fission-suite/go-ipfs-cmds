@@ -17,8 +17,8 @@ type Request struct {
 	Arguments []string
 	Options   OptMap
 
-	Files files.Directory
-
+	Files    files.Directory
+	Extra    []string
 	bodyArgs *arguments
 }
 

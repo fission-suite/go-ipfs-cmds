@@ -83,7 +83,6 @@ func (c *Command) Call(req *Request, re ResponseEmitter, env Environment) {
 	if closeErr != nil && closeErr != ErrClosingClosedEmitter {
 		log.Errorf("error closing ResponseEmitter: %s", closeErr)
 	}
-	log.Debug("all good!!!")
 }
 
 func (c *Command) call(req *Request, re ResponseEmitter, env Environment) error {
